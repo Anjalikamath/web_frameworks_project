@@ -1,0 +1,38 @@
+{% extends 'blo/base.html' %}
+{% block content %}
+
+
+  <div class="Header">
+
+  <h2 align="center">BOOKS</h2><br>
+  <h3 align="center">Non-Fiction</h2>
+    <button  align="left" onclick="goBack()">Go Back</button>
+
+</div>
+
+<div class ="topPart"
+      <ul>
+      <li><h3>The Devil in The White City</h3></li>
+        <p><b><i>-Erik Larson</i></b></p>
+        <img src="DIWC.png" alt="The Devil in The White City" border=3 align="left" style="width:150px;height:200px;"/>
+        <h4>The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America is a 2003 historical non-fiction book by Erik Larson presented in a novelistic style. The book is based on real characters and events.</h4>
+    </ul>
+  </div>
+
+
+
+  <div class="topPart">
+    <ul>
+      <li><h3>Common Sense</h3></li>
+        <p><b><i>-Thomas Paine</i></b></p><br>
+        <img src="cs.png" alt="Common Sense " border=3 align="left" style="width:150px;height:200px;"/>
+      </ul>
+      <p><b>Common Sense was a pamphlet written by Thomas Paine in 1775–76 advocating independence from Great Britain to people in the Thirteen Colonies. Written in clear and persuasive prose, Paine marshaled moral and political arguments to encourage common people in the Colonies to fight for egalitarian government.</b></p>
+</div>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+{% endblock%}
+</body>

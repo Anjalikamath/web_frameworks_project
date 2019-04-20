@@ -1,38 +1,5 @@
-{% load static %}
-<html>
-<head>
-  <title>Bookhunters</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{% static 'css/home.css' %}">
-</head>
-<body>
-<img src = "book_img2.png" height = "100px" width= "150px">-->
-
-<div class = "header">
-
-<h1 align = "center">BookHunters</h1>
-
-
-<div class="topnav">
-
-      <a href="homePg.html">Home</a>
-
-      <a href="books.html">Books</a>
-
-      <a class="active" href="#contactPg">Contact Us</a>
-      <div class="search-container">
-          <form action="action_page.php">
-        <input type="text" placeholder="Search for a book..." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-      </div>
-      <a href = "login.html">Login / Signup</a>
-
-</div>
-
-
-  </div>
-
+{% extends 'blo/base.html' %}
+{% block content %}
 
 
   <div class = "topPart">
@@ -57,5 +24,5 @@
         </p>
     </div>
   </div>
-</body>
-</html>
+  {% endblock%}
+  </body>

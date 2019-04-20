@@ -1,0 +1,38 @@
+{% extends 'blo/base.html' %}
+{% block content %}
+
+  <div class="Header">
+
+  <h2 align="center">BOOKS</h2><br>
+  <h3 align="center">Education</h2>
+    <button onclick="goBack()">Go Back</button>
+
+</div>
+
+<div class ="topPart">
+      <ul>
+      <li><h3>Javascript:The Good Parts</h3></li>
+        <p><b><i>-Douglas Crockford</i></b></p>
+        <img src="Js_the_good_part.png" alt="Javascript:The Good Parts" border=3 align="left" style="width:150px;height:200px;"/>
+        <p><b>
+Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. This authoritative book scrapes away these bad features to reveal a subset of JavaScript that's more reliable, readable, and maintainable than the language as a whole-a subset you can use to create truly extensible and efficient code.</b></p>
+    </ul>
+  </div>
+
+
+
+  <div class="topPart">
+    <ul>
+      <li><h3>Discrete Mathematics and its Applications</h3></li>
+        <p><b><i>-Kenneth H Rosen</i></b></p><br>
+        <img src="DML.png" alt="Discrete Mathematics and its Applications " border=3 align="left" style="width:150px;height:200px;"/>
+        <p> This renowned best-selling text, which has been used at over 600 institutions around the world, gives a focused introduction to the primary themes in a discrete mathematics course and demonstrates the relevance and practicality of discrete mathematics to a wide variety of real-world applications, from computer science to data networking, to psychology, to chemistry, to engineering, to business, and to many other important fields.</p>
+      </ul>
+</div>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+{% endblock%}
+</body>
