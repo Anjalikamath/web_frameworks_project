@@ -9,4 +9,6 @@ urlpatterns = [
     url(r'^blo/Fiction',views.fiction,name='fiction'),
     url(r'^blo/NonFiction',views.nonfiction,name='nonfiction'),
     url(r'^blo/Education',views.education,name='education'),
+    url(r'^blo/register/$',views.register,name='register'),
+    url(r'^blo/login',views.user_login,name='user_login'),
 ]

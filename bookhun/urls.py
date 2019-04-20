@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls import url
-
+from blo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('blo.urls')),
+    #path('accounts/', include('django.contrib.auth.urls')), # new
     #url(r'^blo/',include('blo.urls')),
+    url(r'^$',views.index,name='index'),
+    url(r'^special/',views.special,name='special'),
+    url(r'^logout/$', views.user_logout, name='logout'),
 ]
