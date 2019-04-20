@@ -1,0 +1,17 @@
+
+<html>
+<body>
+<div>
+    <h1><a href="/">BookHunters</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.b_id }}</p>
+        <h2><a href="">{{ post.b_name }}</a></h2>
+        <p>{{ post.b_describe|linebreaksbr }}</p>
+
+    </div>
+{% endfor %}
+</body>
+</html>
