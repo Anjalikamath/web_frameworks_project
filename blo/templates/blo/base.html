@@ -1,0 +1,41 @@
+{% load static %}
+
+<html>
+
+	<head>
+
+		<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+<!--<img src = "book_img2.png" height = "100px" width = "150px">-->
+
+<div class = "header">
+<div id="name"><h1>BookHunters</h1></div>
+
+
+<div class="topnav" id="topnav">
+
+				<a class="btnss" href="homePg.html">Home</a>
+
+				<a class="btnss" href="books.html">Books</a>
+
+				<a class="btnss" href="contact.html">Contact Us</a>
+				<div class="search-container">
+              <form action="search.php" method = "GET">
+                <input type="text" placeholder="Search for a book..." name="search" target="search">
+                <button type="submit"><img src = "srchimg.png" height = "14px" width = "14px"></button>
+              </form>
+          </div><!--close search-container-->
+				<a class="btnss"href = "login_pre.html">Login / Signup</a>
+
+</div><!--close topnav-->
+</div><!--close header-->
+{% block content%}
+{% endblock %}
