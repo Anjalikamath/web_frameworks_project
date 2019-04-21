@@ -3,8 +3,8 @@ from .models import Books
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 #from .forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import UserProfileInfo,User
-admin.site.register(UserProfileInfo)
+#from .models import UserProfileInfo,User
+#admin.site.register(UserProfileInfo)
 
 admin.site.register(Books)
 # Register your models here.

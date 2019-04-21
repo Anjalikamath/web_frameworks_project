@@ -1,0 +1,37 @@
+{% extends 'blo/base2.html' %}
+{% block content %}
+{% if user.is_authenticated%}
+	<h2 align ="center" style="background-color:#FFA500"><b>hi  {{user.username }}!</b></h2>
+	{% endif%}
+		<div class = "topPart">
+			<p><blockquote><h2>Read books? Nah....Who reads books!</h2>Wildly successful people — those with schedules ten times busier than ours — make reading a mandatory part of their daily routines.
+
+Warren Buffett reads 500 pages a day. Gates and Zuckerberg each read one book a week. When Elon Musk was asked how he learned to build rockets he answered, “I read.” Oprah discusses her favorite books with readers in her online book club each month.
+</blockquote></p>
+		</div>
+
+		<div class = "topPart"><h2>Well, yeah a lot of people do read...</h2>
+			<p>#1. Reading is stress-relieving. <br>#2. Reading helps you sleep better.<br>#3. Reading increases empathy.<br>#4. Reading increases intelligence.<br> #5. Reading transports you to a different world.
+			</p>
+		</div>
+		<div class = "topPart" style="padding-left:50px"> <p>Now since you are on this page, We assume you love reading! And you've probably already got a book in mind<br>If you have, type it out in the search bar....and we'll take you right to it.<br>If not, then this is a great place to start searching for one</p>
+		</div>
+
+		<script>
+			window.onscroll = function() {myFunction()};
+			var header = document.getElementsByClassName("header");
+
+			// Get the offset position of the navbar
+			var sticky = header.offsetTop;
+
+			// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+			function myFunction() {
+  				if (window.pageYOffset >= sticky) {
+    					navbar.classList.add("sticky")}
+				else {
+    					navbar.classList.remove("sticky");}
+ 			}
+		</script>
+
+{% endblock%}
+</body>

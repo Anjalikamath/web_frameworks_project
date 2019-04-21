@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blo',
+    'accounts',
     #'users.apps.UsersConfig',
 ]
 
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'bookhun.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,],
+        'DIRS': [os.path.join(BASE_DIR,'blo/templates/'),os.path.join(BASE_DIR,'blo/templates/registeration')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,11 +125,16 @@ USE_TZ = True
 #STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # my_project/settings.py
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/blo/homepg2/'
+LOGOUT_REDIRECT_URL='/blo/homePg/'
 
 #AUTH_USER_MODEL = 'blo.CustomUser' # new
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR,]
-MEDIA_ROOT = MEDIA_DIR
+#MEDIA_ROOT = MEDIA_DIR
+'''DIRS=(
+join(BASE_DIR,'blo/templates/'),join(BASE_DIR,'blo/templates/registeration')
+)
+'''
 #MEDIA_URL = ‘/media/’
 #LOGIN_URL = ‘/blo/user_login/’

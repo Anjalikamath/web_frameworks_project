@@ -1,14 +1,21 @@
 from django.shortcuts import render
 from .models import Books
-from blo.forms import UserForm,UserProfileInfoForm
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views import generic
+
 # Create your views here.
 def homePg(request):
     #posts=Books.objects.all()
     return render(request,'blo/homepg.html',{})
+def homepg2(request):
+    #posts=Books.objects.all()
+    return render(request,'blo/homepg2.html',{})
 def contact(request):
     return render(request,'blo/contacts.html',{})
 def books(request):
@@ -22,6 +29,25 @@ def nonfiction(request):
 def education(request):
     return render(request,'blo/Education.html',{})
 
+class SignUp(generic.CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'blo/signup.html'
+
+
+'''def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('/blo/homepg2.html')
+    else:
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form': form})
 
 def index(request):
     return render(request,'blo/index.html')
@@ -32,7 +58,7 @@ def special(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
-def register(request):
+def registerion(request):
     registered = False
     if request.method == 'POST':
         user_form = UserForm(data=request.POST)
@@ -50,7 +76,7 @@ def register(request):
     else:
         user_form = UserForm()
         profile_form = UserProfileInfoForm()
-    return render(request,'blo/registration.html',{'user_form':user_form,'profile_form':profile_form,'registered':registered})
+    return render(request,'blo/registration.html',{})
 def user_login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -68,3 +94,4 @@ def user_login(request):
             return HttpResponse("Invalid login details given")
     else:
         return render(request, 'blo/login.html', {})
+'''
